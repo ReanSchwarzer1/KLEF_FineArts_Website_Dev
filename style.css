@@ -255,7 +255,7 @@ body {margin:0;font-family:'Montserrat',Arial,sans-serif;background:var(--main-b
 
 .kl-logo-bar img {
   /* existing size, margin, outline etc */
-  filter: brightness(1.35) contrast(1.18) drop-shadow(0 1px 7px #fff);
+  filter: brightness(1.4) contrast(1.18);
 }
 
 .klu-title {
