@@ -194,3 +194,9 @@ document.addEventListener('focusout', function(e){
   if (e.target.matches('.c-course')) tooltip.style.display = 'none';
 });
 window.addEventListener('DOMContentLoaded', buildCurriculumAccordion);
+
+
+
+/*
+  Copyright © 2025 Adhiraj Bhagawati. All rights reserved.
+*/
