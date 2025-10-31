@@ -1,0 +1,295 @@
+:root {
+  --klu-maroon: #97443e;
+  --klu-maroon-dark: #7a3731;
+  --section-bg: #fff9f7;
+  --sidebar-bg: #f6edea;
+  --main-bg: #f4eeea;
+  --glass-white: rgba(255,255,255,0.74);
+  --hoverbar: linear-gradient(90deg, #eebe5d 30%, transparent 70%);
+}
+body {margin:0;font-family:'Montserrat',Arial,sans-serif;background:var(--main-bg);color:#26211f;}
+.top-header {background:var(--klu-maroon);}
+.kl-logo-bar {display:flex;align-items:center;padding:1.3em 2.2em 1em 2.2em;}
+.kl-logo-bar img {height:54px;margin-right:2em;}
+.klu-title {font-weight:900;font-size:2.05rem;color:#fff;}
+.klu-claims {font-size:1.05em;color:#eca;font-weight:700;}
+.hero-section {position:relative;width:100vw;}
+.hero-section video, .hero-section img {width:100vw;max-width:100vw;min-height:320px;height:clamp(315px,44vw,520px);object-fit:cover;}
+.hero-overlay {position:absolute;top:16%;left:3%;color:#fff;text-shadow:0 3px 18px #7a3731;width:50vw;}
+.hero-overlay h1{font-size:4.3vw;letter-spacing:-.005em;line-height:1;}
+.hero-desc{font-size:1.55vw;}
+.apply-now-banner {position:fixed;top:48vh;right:0;width:80px;height:240px;z-index:90;display:flex;align-items:center}
+.apply-now-banner a {
+  display:block;width:80px;height:240px;writing-mode:vertical-rl;transform:rotate(-180deg);
+  background:var(--klu-maroon);color:#fff;font-weight:bold;font-size:1.25em;letter-spacing:0.04em;
+  text-align:center;justify-content:center;padding:1em;border-radius:8px 0 0 8px;text-decoration:none;
+  box-shadow:0 2px 23px #97443e1c;}
+.main-flex {display:flex;}
+.side-nav {min-width:220px;max-width:245px;background:var(--sidebar-bg);border-right:3px solid var(--klu-maroon-dark);padding:2.2em 1.1em 2.2em 2em;position:sticky;top:0;align-self:flex-start;height:calc(100vh - 74px);}
+.side-nav ul {padding:0;margin:0;list-style:none;}
+.side-nav li {margin-bottom:.85em;}
+.side-nav a {color:#494244;font-size:1.15em;font-weight:600;text-decoration:none;display:block;padding:.15em 1.3em;border-radius:8px;transition:.18s;}
+.side-nav a.active,.side-nav a:hover {background:var(--klu-maroon);color:#fff;margin-left:-11px;}
+.side-buttons {margin-top:2em;display:flex;flex-direction:column;gap:.7em;}
+.side-buttons button {width:91%;border:0;border-radius:8px;padding:.81em 0;font-weight:600;font-size:1.01em;}
+.info {background:#fff;color:var(--klu-maroon);}
+.info:hover{background:var(--klu-maroon);color:#fff;}
+.visit {background:var(--klu-maroon);}
+.visit,.apply{color:#f7e7db;}
+.apply {background:#ab5132;color:#fff;}
+.sections-content{flex:1 1 auto;width:100%;max-width:1060px;padding:2.27em 3.1em;}
+.section{margin-bottom:2em;background:var(--glass-white);border-radius:18px;box-shadow:0 2.5px 18px #97443e18;backdrop-filter:blur(7.5px);padding:2.6em 2.5em 2.3em 2.55em;}
+.section h2{color:var(--klu-maroon-dark);font-size:2.1em;margin-bottom:1.1em;}
+.two-col-section {display:grid;grid-template-columns:1.2fr 0.95fr;align-items: flex-start;gap:2em;}
+.section-intro{font-size:1.10em;margin-bottom:1.3em;}
+.quickstats{display:flex;flex-direction:column;gap:1.2em;}
+.quickstats li{background:var(--klu-maroon);color:#fff;padding:.95em 1.7em;border-radius:14px;font-size:1.13em;font-weight:700;margin:0 0 0 .6em;box-shadow:0 2px 14px #97443e10;}
+.careers-list{font-size:1.08em;line-height:1.72em;list-style:disc inside;}
+.careers-list li{margin-bottom:.28em;}
+.careers-detail{font-size:1.12em;}
+.careers-detail ul{margin-top:1em;}
+.featured-projects{display:flex;gap:1.5em;margin-bottom:.9em;}
+.project-card{background:rgba(255,255,255,.89);border-radius:16px;box-shadow:0 1.5px 16px #97443e10;flex:1 1 280px;min-width:230px;padding-bottom:1em;text-align:center;transition:.19s;backdrop-filter:blur(7px);}
+.project-card iframe,.project-card img{width:100%;aspect-ratio:16/9;border-radius:16px 16px 0 0;}
+.project-card .project-title{font-weight:700;color:var(--klu-maroon-dark);font-size:1.11em;display:inline-block;position:relative;padding:0 .16em .16em .12em;}
+.project-card .sketchbar{display:block;width:70%;height:4px;background:var(--hoverbar);margin:2px auto 0;}
+.all-link{background:var(--klu-maroon);color:#fff!important;text-decoration:none;font-weight:700;padding:.52em 2.1em;border-radius:6px;}
+.all-link:hover{background:#ab5132;}
+/* Curriculum: Accordion with Electives */
+.c-block{background:rgba(254,254,255,0.61);margin-bottom:2.2em;border-radius:16px;box-shadow:0 2.5px 18px #97443e08;backdrop-filter:blur(7px);}
+.c-block-head{cursor:pointer;display:flex;align-items:center;justify-content:space-between;padding:1.13em 1.30em 1.13em 1.23em;font-weight:650;font-size:1.11em;background:rgba(255,255,255,.93);color:var(--klu-maroon-dark);border-radius:16px 16px 0 0;}
+.c-block-head:hover{background:var(--klu-maroon); color:#fff;}
+.c-block-body{display:none;padding:1.25em 1.4em;}
+.semester-block{margin-bottom:1.1em;background:rgba(249,235,230,0.50);border-radius:13px;}
+.semester-head{cursor:pointer;display:flex;align-items:center;justify-content:space-between;padding:.84em 1.10em;font-weight:600;font-size:1.04em;color:var(--klu-maroon-dark);}
+.semester-head:hover{background:var(--klu-maroon);color:#fff;}
+.semester-body{display:none;padding:0 1.4em .7em;}
+.c-list{margin:0;padding:0;list-style:none;}
+.c-list li{display:flex;align-items:center;margin-bottom:.7em;font-size:1.1em;}
+.c-list span.c-course{cursor:pointer;position:relative;font-weight:600;padding:.07em .4em .13em 0;border-bottom:2.5px solid transparent;transition:border-color .18s;}
+.c-list span.c-course:hover,.c-list span.c-course:focus{border-bottom:2.5px solid #eebe5d;background:#fffbe6;border-radius:2px;}
+.c-list .course-name{margin-left:.8em;font-weight:400;}
+/* Faculty, Facilities, Contact */
+.faculty-grid{display:flex;gap:2em;flex-wrap:wrap;}
+.faculty-tile{background:rgba(255,255,255,.87);border-radius:12px;box-shadow:0 1.5px 13px #97443e10;display:flex;flex-direction:column;align-items:center;min-width:220px;max-width:290px;padding:1.25em;backdrop-filter:blur(7px);}
+.faculty-tile img{width:109px;height:109px;border-radius:18px;}
+.faculty-info{margin-top:.3em;font-size:1.03em;}
+.facilities-gallery{display:flex;gap:1.7em;overflow-x:auto;}
+.facilities-gallery figure{background:rgba(255,255,255,.83);border-radius:10px;min-width:200px;max-width:270px;padding:0.78em;text-align:center;}
+.facilities-gallery img{width:100%;height:108px;object-fit:cover;border-radius:8px;}
+.facilities-gallery figcaption{font-size:.99em;padding-top:.5em;}
+.contact-grid{display:flex;gap:2.2em;}
+.contact-person{background:rgba(255,255,255,.80);border-radius:10px;box-shadow:0 1.5px 12px #97443e08;text-align:center;padding:1.2em .7em;min-width:200px;}
+.contact-person img{width:90px;height:90px;border-radius:18px;}
+.footer-bar{background:var(--klu-maroon-dark);color:#f7e7db;text-align:center;padding:1.4em 0 .75em;}
+.course-tooltip{position:absolute;z-index:99;max-width:330px;background:#fff;box-shadow:0 3.5px 30px #97443e23;border-radius:9px;padding:1em 1.15em;color:#51281c;border:2px solid var(--klu-maroon);font-size:.98em;}
+@media (max-width:1000px){
+  .main-flex{flex-direction:column;}
+  .side-nav{position:relative;width:100%;max-width:100vw;height:auto;padding:1.4em}
+  .sections-content{padding:1.21em 0.4em;}
+  .two-col-section{grid-template-columns:1fr;}
+  .faculty-grid,.facilities-gallery,.contact-grid{flex-direction:column;align-items:flex-start;}
+}
+
+.apply-now-banner {
+  position:fixed;
+  top:48vh; right:0; width:48px; height:138px;
+  z-index:90; display:flex; align-items:center
+}
+.apply-now-banner a {
+  display:block;
+  width:48px; height:138px;
+  font-size:0.93em;
+  writing-mode:vertical-rl; transform:rotate(-180deg);
+  background:var(--klu-maroon);color:#fff;font-weight:700;letter-spacing:0.04em;text-align:center;
+  padding:0.5em 0.1em; border-radius:7px 0 0 7px;text-decoration:none;
+  box-shadow:0 2px 14px #97443e1a;
+}
+
+/* Faculty bigger photo, card controls, and bottom links */
+.faculty-grid {
+  display:flex; gap:2.8em; flex-wrap:wrap;
+}
+.faculty-tile {
+  background:rgba(255,255,255,.92); border-radius:16px;box-shadow:0 4px 26px #97443e13;
+  display:flex;flex-direction:column;align-items:center;min-width:230px;max-width:360px;padding:2em 1.2em;backdrop-filter:blur(8px);
+}
+.faculty-tile img {
+  width:154px;height:154px;object-fit:cover;border-radius:25px;box-shadow:0 2.5px 23px #97443e19;margin-bottom:.8em;
+}
+.faculty-info { margin-bottom:0.55em; font-size:1.11em; }
+.faculty-links {
+  display:flex; gap:1.3em; margin-top:0.3em; font-size:1.30em; justify-content:center;
+}
+.faculty-links a { color:var(--klu-maroon-dark);transition:color .22s;}
+.faculty-links a:hover { color:var(--klu-maroon); }
+
+.faculty-all-link {
+  font-size:.9em; margin-left:1.2em;color:var(--klu-maroon-dark);font-weight:700; vertical-align:middle;text-decoration:none;transition:.18s;
+}
+.faculty-all-link:hover { color:var(--klu-maroon);}
+.facilities-gallery img.bigfacility { width:260px;height:160px;object-fit:cover;border-radius:11px;box-shadow:0 2.5px 23px #97443e19;}
+@media (max-width:1000px){
+  .faculty-tile img, .facilities-gallery img.bigfacility {width:100%;height:178px;}
+  .faculty-grid {gap:1.3em;}
+  .facilities-gallery {gap:1.4em;}
+}
+
+.kl-logo-bar {
+  display: flex;
+  align-items: center;
+  padding: 1.3em 2.2em 1em 2.2em;
+  gap: 3.2em;
+  background: var(--klu-maroon);
+}
+
+.top-logos {
+  display: flex;
+  align-items: center;
+  gap: 1.6em;
+}
+
+.header-logo {
+  display: block;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  /* No border radius, no background, no box */
+  filter: none;
+}
+
+.main-logo {
+  height: 102px;
+  width: auto;
+  max-width: 160px;
+}
+.dept-logo {
+  height: 116px;
+  width: auto;
+  max-width: 200px;
+  /* Make department logo extra bold if you wish */
+}
+
+.headline {
+  display: flex;
+  flex-direction: column;
+}
+.klu-title {
+  font-weight:900;
+  font-size:2.2rem;
+  color:#fff;
+  letter-spacing: -0.7px;
+}
+.klu-claims {
+  font-size:1.15em;
+  color:#f5e4ce;
+  font-weight:700;
+  margin-top:0.2em;
+}
+
+/* For smaller screens */
+@media (max-width: 900px) {
+  .kl-logo-bar { flex-direction: column; align-items: flex-start; gap: 1.2em; padding: 1em 1em 1em 1em;}
+  .top-logos { gap:.8em;}
+  .main-logo { height: 70px; max-width: 95px;}
+  .dept-logo { height: 85px; max-width: 120px;}
+  .headline { align-items: flex-start;}
+}
+
+.main-logo {
+  height: 120px;         /* Increased from ~102px */
+  max-width: 190px;      /* Slightly wider max */
+  width: auto;
+}
+.dept-logo {
+  height: 162px;         /* Significantly larger */
+  max-width: 290px;
+  width: auto;
+}
+@media (max-width: 900px) {
+  .main-logo { height: 80px; max-width: 130px;}
+  .dept-logo { height: 115px; max-width: 180px;}
+}
+
+.kl-logo-bar img {
+  height:130px;      /* Significantly larger */
+  margin-right:2.8em;
+  width:auto;
+  max-width:280px;   /* In case your file is wide */
+}
+
+@media (max-width: 900px) {
+  .kl-logo-bar img {
+    height:80px;
+    margin-right:1.4em;
+    max-width:170px;
+  }
+}
+
+.kl-logo-bar img {
+  height: 70px;
+  width: auto;
+  max-width: 160px;
+  margin-right: 0.6em;
+}
+
+.kl-logo-bar img:nth-child(2) {
+  height: 108px;     /* Department (Fine Arts) logo much larger */
+  max-width: 230px;
+  margin-right: 0.02em;
+}
+
+/* Responsive for mobile if needed */
+@media (max-width: 900px) {
+  .kl-logo-bar img {
+    height: 38px;
+    max-width: 66px;
+    margin-right: 0.7em;
+  }
+  .kl-logo-bar img:nth-child(2) {
+    height: 65px;
+    max-width: 110px;
+    margin-right: 0.7em;
+  }
+}
+
+.kl-logo-bar img {
+  /* existing size, margin, outline etc */
+  filter: brightness(1.35) contrast(1.18) drop-shadow(0 1px 7px #fff);
+}
+
+.klu-title {
+  font-weight: 900;
+  font-size: 2.8rem;
+}
+
+.top-logos {
+  gap: 0.02em;  /* logos nearly touching */
+}
+
+.apply-now-banner a {
+  display: block;
+  width: 64px;                /* smaller default */
+  height: 180px;              /* smaller default */
+  font-size: 1.03em;
+  writing-mode: vertical-rl;
+  transform: rotate(-180deg) scale(0.92);   /* slightly shrunk */
+  background: var(--klu-maroon);
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-align: center;
+  padding: 1.1em 0.4em;
+  border-radius: 14px 0 0 14px;
+  text-decoration: none;
+  box-shadow: 0 2px 14px #97443e1a;
+  transition: background 0.18s, color 0.18s, box-shadow 0.18s, transform 0.13s cubic-bezier(.33,1.4,.62,1.01);
+}
+
+/* On hover: grow and color change */
+.apply-now-banner a:hover {
+  background: #ad7671;
+  color: #ffeee2;
+  box-shadow: 0 4px 24px #97443e99;
+  transform: rotate(-180deg) scale(1.12);   /* grows smoothly */
+}
