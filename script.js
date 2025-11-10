@@ -304,17 +304,6 @@ modal.addEventListener('click', (e) => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 /*
   Copyright © 2025 Adhiraj Bhagawati. All rights reserved.
 */

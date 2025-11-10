@@ -492,13 +492,33 @@ html, body {
 }
 
 
+.faculty-all-link {
+  position: relative;
+  transition: color 0.18s;
+}
 
+.faculty-all-link:hover,
+.faculty-all-link:focus {
+  color: var(--klu-maroon); /* or your accent color */
+}
 
+.faculty-all-link::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 3px;
+  background: var(--klu-maroon);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
 
-
-
-
-
+.faculty-all-link:hover::after,
+.faculty-all-link:focus::after {
+  opacity: 1;
+}
 
 
 
