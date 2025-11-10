@@ -294,16 +294,194 @@ body {margin:0;font-family:'Montserrat',Arial,sans-serif;background:var(--main-b
   transform: rotate(-180deg) scale(1.12);   /* grows smoothly */
 }
 
+#scrollUpBtn {
+  display: none;
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 120;
+  background: var(--klu-maroon, #97443e);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 54px;
+  height: 54px;
+  font-size: 2em;
+  cursor: pointer;
+  box-shadow: 0 2px 18px #97443e1a;
+  transition: background 0.18s, transform 0.15s;
+}
+#scrollUpBtn:hover {
+  background: var(--klu-maroon-dark, #7a3731);
+  transform: scale(1.13);
+}
+
+#scrollUpBtn {
+  /* Example: update with a new color */
+  background: #5c3d33;      /* Rich brown */
+  /* or */
+  /* background: #eebe5d;   /* Accent yellow */
+  /* or */
+  /* background: #3e74b8;   /* Pleasant blue */
+  color: #fff;
+  /* rest of your styles */
+}
+#scrollUpBtn:hover {
+  background: #985e4a;   /* Darker shade for hover */
+}
+
+
+.events-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;       /* Critical: NO wrapping */
+  gap: 2em;
+  overflow-x: auto;        /* Shows horizontal scrollbar when overflow */
+  overflow-y: hidden;
+  max-width: 100vw;        /* Ensures container doesn't overflow screen */
+  width: 100%;
+  box-sizing: border-box;
+  padding-bottom: 1em;
+  scrollbar-width: thin;
+  scrollbar-color: #97443e #f4eeea;
+}
+
+.events-grid::-webkit-scrollbar {
+  height: 12px;
+}
+
+.events-grid::-webkit-scrollbar-thumb {
+  background: #97443e;
+  border-radius: 7px;
+}
+
+.events-grid::-webkit-scrollbar-track {
+  background: #f4eeea;
+  border-radius: 7px;
+}
+
+
+.event-card {
+  background: rgba(255,255,255,.89);
+  border-radius: 16px;
+  box-shadow: 0 1.5px 16px #97443e10;
+  flex: 1 1 230px;
+  min-width: 180px;
+  max-width: 220px;
+  padding-bottom: 1em;
+  text-align: center;
+  cursor: pointer;
+  transition: .19s;
+  backdrop-filter: blur(7px);
+}
+.event-card img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 16px 16px 0 0;
+}
+.event-title {
+  font-weight: 700;
+  color: var(--klu-maroon-dark);
+  font-size: 1.07em;
+  margin-top: .5em;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.53);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+}
+.modal-content {
+  background: var(--glass-white);
+  border-radius: 18px;
+  box-shadow: 0 4px 30px #97443e27;
+  padding: 2em 2.3em 1.6em 2.3em;
+  max-width: 520px;
+  width: 94vw;
+  position: relative;
+  text-align: center;
+}
+.close-btn {
+  position: absolute;
+  top: 1.05em;
+  right: 1.16em;
+  font-size: 1.8em;
+  cursor: pointer;
+  color: var(--klu-maroon-dark);
+}
+.next-event-btn, #prev-img, #next-img {
+  background: var(--klu-maroon);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: .5em 1em;
+  margin: .7em .3em;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.141s;
+}
+.next-event-btn:hover, #prev-img:hover, #next-img:hover {
+  background: var(--klu-maroon-dark);
+}
+.modal-gallery {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  justify-content: center;
+  margin-bottom: 1em;
+}
+#modal-img {
+  width: 270px;
+  height: 152px;
+  object-fit: cover;
+  border-radius: 9px;
+}
+.modal-report {
+  max-height: 106px;
+  overflow-y: auto;
+  background: rgba(255,255,255,0.91);
+  border-radius: 7px;
+  margin: .9em 0;
+  padding: .8em;
+  color: #51281c;
+}
 
 
 
+.modal-content {
+  background: var(--glass-white);
+  border-radius: 20px;
+  box-shadow: 0 6px 46px #97443e40;
+  padding: 4em 4em 3em 4em;
+  max-width: 900px;         /* Increase maximum width */
+  min-width: 350px;         /* Ensure good minimum on small screens */
+  width: 98vw;              /* More screen space */
+  position: relative;
+  text-align: center;
+  font-size: 1.16em;        /* Slightly larger font size */
+}
 
 
+#modal-img {
+  width: 420px;      /* instead of 270px */
+  height: 240px;     /* instead of 152px */
+  object-fit: cover;
+  border-radius: 13px;
+}
 
 
-
-
-
+#modal-img {
+  width: 420px;
+  height: 240px;
+  max-width: 98%;
+  object-fit: contain;         /* 'contain' for poster images */
+  border-radius: 13px;
+  background: #f0edea;
+}
 
 
 

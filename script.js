@@ -195,6 +195,124 @@ document.addEventListener('focusout', function(e){
 });
 window.addEventListener('DOMContentLoaded', buildCurriculumAccordion);
 
+// Scroll Up Button
+const scrollUpBtn = document.createElement('div');
+window.addEventListener('DOMContentLoaded', function() {
+  const btn = document.getElementById('scrollUpBtn');
+  // Show when scrolled down
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      btn.style.display = 'block';
+    } else {
+      btn.style.display = 'none';
+    }
+  });
+  // Scroll to top on click
+  btn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+
+
+// Example event data structure
+const events = [
+  {
+    title: "Game Production Seminar (Sam Beckann)",
+    type: "Seminar",
+    images: ["assets/poster_gameprod.png", "assets/gameprod1.png", "assets/gameprod2.png", "assets/gameprod3.png"],
+    report: "The webinar led by Sam Beckmann gave students an in-depth understanding of the game development pipeline and the varied roles in the industry. He stressed the importance of building strong portfolios, communicating well, leading teams with humility, and handling burnout. Participants felt inspired and gained practical tools for future careers in animation and gaming."
+  },
+  {
+    title: "Game Design Webinar (Siddharth Menon)",
+    type: "Webinar",
+    images: ["assets/poster_gamedesign.png", "assets/gamedes1.JPEG", "assets/gamedes2.JPEG","assets/gamedes3.JPEG", "assets/gamedes4.JPEG", "assets/gamedes5.JPEG"],
+    report: "The Game Design Webinar discussed the fundamental structure of games and the core responsibilities of a game designer. Led by Siddharth Menon from Dirtcube Interactive, the session emphasized purpose-driven design in game development. It was held online on September 20, 2025, and organized by the KL Department of Fine Arts."
+  },
+  {
+    title: "IndiaJoy 2025 Convention (Hyderabad)",
+    type: "Convention",
+    images: ["assets/indiajoy25_0.JPEG", "assets/indiajoy25_1.JPEG", "assets/indiajoy25_2.JPEG","assets/indiajoy25_3.JPEG", "assets/indiajoy25_4.png"],
+    report: "At IndiaJoy 2025, Assistant Professor Adhiraj attended the event with his students and their Head of Department, Dr. Subhash Yalavarthy. The group engaged with the latest innovations in gaming, animation, and interactive media. This experience provided valuable exposure and inspiration for their academic and professional pursuits."
+  }
+  // Add more event objects as needed
+];
+
+const eventCards = document.querySelectorAll('.event-card');
+const modal = document.getElementById('event-modal');
+const closeBtn = modal.querySelector('.close-btn');
+const nextBtn = modal.querySelector('.next-event-btn');
+
+let currentEvent = 0;
+let currentImg = 0;
+
+// Opens the modal for the event at index
+function openModal(eventIndex) {
+  currentEvent = eventIndex;
+  currentImg = 0;
+  updateModal();
+  modal.style.display = "flex";
+}
+
+// Updates modal content with currentEvent
+function updateModal() {
+  const evt = events[currentEvent];
+  document.getElementById('modal-title').textContent = evt.title;
+  document.getElementById('modal-type').textContent = evt.type;
+  document.getElementById('modal-img').src = evt.images[currentImg];
+  document.getElementById('modal-img').alt = evt.title;
+  document.getElementById('modal-report').textContent = evt.report;
+}
+
+// Image navigation
+modal.querySelector('#prev-img').addEventListener('click', () => {
+  if (currentImg > 0) currentImg--;
+  else currentImg = events[currentEvent].images.length - 1;
+  updateModal();
+});
+modal.querySelector('#next-img').addEventListener('click', () => {
+  if (currentImg < events[currentEvent].images.length - 1) currentImg++;
+  else currentImg = 0;
+  updateModal();
+});
+
+// Next event navigation
+nextBtn.addEventListener('click', () => {
+  currentEvent = (currentEvent + 1) % events.length;
+  currentImg = 0;
+  updateModal();
+});
+
+// Close modal
+closeBtn.addEventListener('click', () => { modal.style.display = 'none'; });
+
+// Open modal when event card clicked
+eventCards.forEach(card => {
+  card.addEventListener('click', () => {
+    openModal(parseInt(card.dataset.event));
+  });
+});
+
+// Optional: close modal when clicking outside modal-content
+modal.addEventListener('click', (e) => {
+  if (e.target == modal) modal.style.display = 'none';
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*

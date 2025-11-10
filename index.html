@@ -37,15 +37,11 @@
         <li><a href="#careers">Careers & Experiential</a></li>
         <li><a href="#featured">Featured Work</a></li>
         <li><a href="#curriculum">Curriculum</a></li>
+        <li><a href="#events">Events</a></li>
         <li><a href="#faculty">Faculty</a></li>
         <li><a href="#facilities">Facilities</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <div class="side-buttons">
-        <button class="info">Request Info</button>
-        <button class="visit">Visit</button>
-        <button class="apply">Apply</button>
-      </div>
     </nav>
     <main class="sections-content">
       <section id="overview" class="section glassmorph">
@@ -122,10 +118,63 @@
         </div>
       </section>
       <section id="curriculum" class="section glassmorph"><h2>Curriculum 2025–2028</h2><div id="curriculum-accordion"></div></section>
+           <!-- Events Section -->
+<section id="events" class="section glassmorph">
+  <h2>Events</h2>
+  <div class="events-grid">
+    <!-- Example Event Card (repeat for each event) -->
+    <div class="event-card" data-event="0">
+      <img src="assets/gameprod1.png" alt="Event 1" />
+      <div class="event-title">Game Production Seminar (Sam Beckmann)</div>
+    </div>
+    <div class="event-card" data-event="1">
+      <img src="assets/gamedes1.JPEG" alt="Event 2" />
+      <div class="event-title">Game Design Webinar (Siddharth Menon)</div>
+    </div>
+    <div class="event-card" data-event="2">
+      <img src="assets/indiajoy25_0.JPEG" alt="Event 3" />
+      <div class="event-title">IndiaJoy 2025 Convention (Hyderabad)</div>
+    </div>
+    <div class="event-card" data-event="2">
+      <img src="assets/indiajoy25_0.JPEG" alt="Event 3" />
+      <div class="event-title">IndiaJoy 2025 Convention (Hyderabad)</div>
+    </div>
+    <div class="event-card" data-event="2">
+      <img src="assets/indiajoy25_0.JPEG" alt="Event 3" />
+      <div class="event-title">IndiaJoy 2025 Convention (Hyderabad)</div>
+    </div>
+    <div class="event-card" data-event="2">
+      <img src="assets/indiajoy25_0.JPEG" alt="Event 3" />
+      <div class="event-title">IndiaJoy 2025 Convention (Hyderabad)</div>
+    </div>
+    <!-- ...more cards... -->
+  </div>
+  <p style="color: #7a3731; font-size: 0.98em; margin-bottom: 0.6em;">
+  <em>Scroll sideways to see more events &rarr;</em>
+</p>
+
+</section>
+
+<!-- Event Pop-Up Modal -->
+<div id="event-modal" class="modal" style="display:none;">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <h3 id="modal-title"></h3>
+    <p id="modal-type"></p>
+    <div class="modal-gallery">
+      <button id="prev-img">&#8592;</button>
+      <img id="modal-img" src="" alt="Event Image">
+      <button id="next-img">&#8594;</button>
+    </div>
+    <div class="modal-report" id="modal-report"></div>
+    <button class="next-event-btn">Next Event</button>
+  </div>
+</div>
+
       <section id="faculty" class="section glassmorph">
         <h2>
           Faculty
-          <a href="https://kluniversity.in/animation-gaming/faculty" class="faculty-all-link" target="_blank">Explore All Program Faculty →</a>
+          <a href="faculty-all/faculty-all.html" class="faculty-all-link" target="_blank">Explore All Program Faculty →</a>
         </h2>
         <div class="faculty-grid">
           <div class="faculty-tile">
@@ -149,15 +198,6 @@
           <div class="faculty-tile">
             <img src="assets/prof-annie.jpg" alt="Dr. John Adinarayana">
             <div class="faculty-info"><b>Dr. John Adinarayana</b><br>???</div>
-            <div class="faculty-links">
-              <a href="https://anniepaul.com" target="_blank" aria-label="Website"><i class="fas fa-globe"></i></a>
-              <a href="https://linkedin.com/in/anniepaul" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-              <a href="https://orcid.org/0000-0002-0000-0003" target="_blank" aria-label="ORCID"><i class="fab fa-orcid"></i></a>
-            </div>
-          </div>
-          <div class="faculty-tile">
-            <img src="assets/prof-annie.jpg" alt="Prof. Adhiraj Bhagawati">
-            <div class="faculty-info"><b>Prof. Adhiraj Bhagawati</b><br>Game Design & Development</div>
             <div class="faculty-links">
               <a href="https://anniepaul.com" target="_blank" aria-label="Website"><i class="fas fa-globe"></i></a>
               <a href="https://linkedin.com/in/anniepaul" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
@@ -211,6 +251,7 @@
     </div>
   </footer>
   <script src="script.js"></script>
+  <button id="scrollUpBtn" title="Back to Top">&#8679;</button>
 </body>
 </html>
 
