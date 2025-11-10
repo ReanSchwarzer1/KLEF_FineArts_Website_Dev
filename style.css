@@ -485,7 +485,11 @@ body {margin:0;font-family:'Montserrat',Arial,sans-serif;background:var(--main-b
 
 
 
-
+html, body {
+  overflow-x: hidden;
+  box-sizing: border-box;
+  width: 100%;
+}
 
 
 
