@@ -288,8 +288,29 @@ body.dark-mode .footer-bar {
   border-radius: 50%;
 }
 
+/* For tablets and large screens */
+@media (max-width: 1200px) {
+  .faculty-grid { gap: 2em 1.1em; }
+  .faculty-tile img { width: 200px; height: 200px; }
+}
+
+/* For mobile screens */
+@media (max-width: 900px) {
+  .header-logos-titles { flex-direction: column; gap: 1.3em; text-align: center; }
+  .main-title { font-size: 1.3em; }
+  .main-navbar { padding: 1em 0.6em 0.5em 0.6em; }
+  .faculty-grid { gap: 1em 0.7em; }
+  .faculty-tile { min-width: 84vw; max-width: 96vw; }
+  .faculty-tile img { width: 120px; height: 120px; }
+}
+
+/* For very small screens */
+@media (max-width: 540px) {
+  .faculty-tile img { width: 68vw; height: 68vw; min-width: 95px; }
+  .faculty-tile { min-width: 98vw; }
+}
 
 
 /*
-  Copyright © 2025 Your Name or Your Company Name. All rights reserved.
+  Copyright © 2025 Adhiraj Bhagawati. All rights reserved.
 */
